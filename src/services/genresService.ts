@@ -1,0 +1,7 @@
+
+const genresService={
+
+}
+export {
+    genresService
+}

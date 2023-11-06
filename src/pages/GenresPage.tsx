@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Rrr = () => {
+const GenresPage = () => {
     return (
         <div>
-            lrrfg
+
         </div>
     );
 };
 
-export default Rrr;
+export {GenresPage};
