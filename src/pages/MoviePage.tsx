@@ -6,8 +6,9 @@ const MoviePage = () => {
     return (
         <div>
             movie
-<Movies/>
+            <Movies/>
             <Outlet/>
+
         </div>
     );
 };

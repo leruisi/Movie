@@ -4,15 +4,22 @@ import { IMovie } from '../../interface/MovieInterface';
 import { Movie } from './Movie';
 
 const Movies = () => {
-    const [movies, setMovies] = useState<IMovie[]>({ results:[]});
+
+    const [movies, setMovies] = useState<IMovie[]>([]);
 
     useEffect(() => {
-        moviesService.getAll()
-            .then(({data:{results}}) => setMovies(results))
-            .catch((error) => {
-                console.error('Произошла ошибка при получении фильмов:', error);
-            });
+        const fetchMovies = async ()=>{
+            try{
+                const response = await moviesService.getAll();
+                const {results}= response.data;
+                setMovies(results)
+                console.log(results)
+            }
+            catch (error){ console.log("error, Try again")
+            }
+        fetchMovies()}
     }, []);
+
 
     return (
         <div>
