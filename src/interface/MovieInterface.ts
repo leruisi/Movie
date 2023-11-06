@@ -1,4 +1,5 @@
 export interface IMovie  {
+    page:number;
     id: number;
     original_language:string;
     original_title:string;

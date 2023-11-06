@@ -7,7 +7,7 @@ import {api_key, urls} from "../constant/urls";
 const moviesService = {
     // getAll: (): IRes<IMovie[]> => axiosService.get(urls.movie.base+`${api_key}`)
     // getAll: (): IRes<IMovie[]> => axiosService.get(`${urls.movie.base}/${api_key}`)
-    getAll: (): IRes<IMovie[]> => axiosService.get(urls.movie.base+api_key)
+    getAll: (page: string): IRes<IMovie[]> => axiosService.get(urls.movie.base+api_key, {params:page})
 
 }
 
