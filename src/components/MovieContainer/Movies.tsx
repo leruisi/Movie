@@ -4,7 +4,7 @@ import { IMovie } from '../../interface/MovieInterface';
 import { Movie } from './Movie';
 
 const Movies = () => {
-    const [movies, setMovies] = useState<IMovie[]>({ results:[]}); // Initialize 'movies' state as an empty array
+    const [movies, setMovies] = useState<IMovie[]>({ results:[]});
 
     useEffect(() => {
         moviesService.getAll()
