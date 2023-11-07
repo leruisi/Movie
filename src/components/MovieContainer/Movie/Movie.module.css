@@ -1,0 +1,37 @@
+
+.movie{
+
+    text-align: center;
+    padding: 50px;
+
+}
+
+.movieImg {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.movieImg > img {
+    box-shadow: 1px 1px 15px 5px grey;
+    padding: 5px;
+    border-radius: 40px;
+}
+
+.movieInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: grey;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.btnDetails{
+    background-color: lightblue;
+    border-radius: 20%;
+    height: 20px;
+    width: 50px;
+}

@@ -1,0 +1,59 @@
+
+.movieCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+
+
+
+}
+
+.search {
+    > input, > button {
+        margin: 0 auto;
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        position: absolute;
+        bottom: 78%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+    }
+
+    > input {
+        height: 25px;
+        width: 25%;
+        box-shadow: 1px 1px 6px -2px grey;
+        padding: 10px;
+        left: 50%;
+        font-size: 22px;
+
+        &::placeholder {
+            font-size: 16px;
+        }
+    }
+
+
+    > button {
+        height: 46px;
+        padding: 0 25px;
+        left: 60%;
+        font-size: 15px;
+        background: linear-gradient(90deg, rgba(15, 255, 184, 1) 33%,
+        rgba(7, 110, 112, 1) 100%);
+        cursor: pointer;
+        font-weight: bolder;
+    }
+}
+
+
+
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+
+    border-radius: 30%;
+}
