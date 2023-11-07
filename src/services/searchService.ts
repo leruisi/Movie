@@ -6,6 +6,6 @@ import {searchEnpoint} from "../constant/apiURLS";
 
 
 const searchService={
-getAll:(searchTerm:string):IRes<IMovieResonse> => axiosService.get(searchEnpoint,{params:{query:{searchTerm}}})}
+getAll:(searchTerm:string):IRes<IMovieResonse> => axiosService.get(searchEnpoint,{params:{query:searchTerm}})}
 
 export {searchService}

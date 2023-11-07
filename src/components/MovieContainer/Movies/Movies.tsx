@@ -35,7 +35,6 @@ const Movies = () => {
             const response = await searchService.getAll(searchTerm);
             const { results } = response.data;
             setMovies(results.slice(0, 6));
-            console.log(results);
         } catch (error) {
             console.log('Ошибка');
         }
@@ -117,8 +116,9 @@ const Movies = () => {
                        setSearchQuer(e.target.value)
                        console.log(e.target.value)
                    }}
+                   placeholder={'Search'}
             />
-            <button onClick={() =>setSearchQuer('')} >Show All</button>
+            <button onClick={() =>setSearchQuer('')} >Clean</button>
             </div>
             <div className={style.movieCard}>{movies.map((movie) => (
                 <Movie key={movie.id} movie={movie}/>
