@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState} from 'react';
 
 import { moviesService } from '../../services';
-import { IMovie } from '../../interface/MovieInterface';
+import {IMovie} from '../../interface/MovieInterface';
 import { Movie } from './Movie';
 import {useSearchParams} from "react-router-dom";
 import style from "./Movies.module.css"
+
+
+
+
 
 const Movies = () => {
 
@@ -13,17 +17,28 @@ const Movies = () => {
     const page = query.get('page') || '1';
 
     useEffect(() => {
-        const fetchMovies = async ()=>{
-            try{
-                const response = await moviesService.getAll(page);
-                const {results}= response.data;
-                setMovies(results.slice(0,7))
-                console.log(results)
+            const fetchMovies = async () => {
+                try {
+                    const response = await moviesService.getAll(page);
+                    const {results} = response.data;
+                    setMovies(results.slice(0, 7))
+
+                    // const moviesResponse: IMovieResonse = response.data;
+                    //  setMovies(moviesResponse.results.slice(0, 7));
+
+                    // const response:AxiosResponse<IMovieResonse[]> = await moviesService.getAll(page);
+                    // const {results} = response.results;
+
+
+                    console.log(results)
+                } catch (error) {
+                    console.log("error, Try again")
+                }
             }
-            catch (error){ console.log("error, Try again")
-            }
-        fetchMovies()}
-    }, [page]);
+            fetchMovies()
+        },
+        [page]);
+
 
     const prevHandler = () => {
         setQuery(prev => {
