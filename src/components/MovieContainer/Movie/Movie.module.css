@@ -1,8 +1,11 @@
 
 .movie{
-
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     text-align: center;
-    padding: 50px;
+    padding: 100px;
+    flex-direction: column;
 
 }
 

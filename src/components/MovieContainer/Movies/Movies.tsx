@@ -26,7 +26,7 @@ const Movies = () => {
             setMovies(results.slice(0, 6));
             console.log(results);
         } catch (error) {
-            console.log('Ошибка, попробуйте еще раз');
+            console.log('Ошибка');
         }
     };
 
@@ -37,7 +37,7 @@ const Movies = () => {
             setMovies(results.slice(0, 6));
             console.log(results);
         } catch (error) {
-            console.log('Ошибка, попробуйте еще раз');
+            console.log('Ошибка');
         }
     };
 

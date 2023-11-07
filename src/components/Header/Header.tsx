@@ -2,7 +2,7 @@ import React from 'react';
 import style from './Header.module.css'
 import {NavLink} from "react-router-dom";
 import {LoginUser} from "../UserInfo";
-import {MoviePage} from "../../pages";
+
 const Header = () => {
     return (
         <div className={style.Header}>
