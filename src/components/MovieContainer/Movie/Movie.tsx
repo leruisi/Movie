@@ -17,14 +17,14 @@ const Movie: FC<IProps> = ({movie}) => {
                 <div className={style.movieImg}>
                     {poster_path && <img src={`https://image.tmdb.org/t/p/w300/${poster_path}`} alt="img"/>}
                 </div>
-                <div className={style.raing}><StarRatings
+                <div className={style.raiting}><StarRatings
                     rating={vote_average}
                     starRatedColor="gold"
                     numberOfStars={10}
                     starDimension="20px"
                     starSpacing="2px"
                 />
-                <p>{vote_average}</p>
+                <p >{vote_average}</p>
                 </div>
                 <p className={style.movieInfo}> release date: {release_date}</p>
                 <div className={style.movieInfo}> original language: {original_language}</div>
