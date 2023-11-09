@@ -6,7 +6,7 @@ export interface ContextState {
 
 export interface useThemeLightDark{
     theme: ContextState['theme'];
-    toggleTheme: () => void;
+    toggle: () => void;
 }
 
 

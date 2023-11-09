@@ -2,7 +2,7 @@ import React from 'react';
 
 const Theme = () => {
     return (
-        <div>
+        <div id="light">
             
         </div>
     );

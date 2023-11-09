@@ -1,4 +1,3 @@
-import {ContextState} from "../interface/ThemeInterface";
-import {createContext,Dispatch,SetStateAction} from 'react'
+import {Dispatch, SetStateAction} from "react";
 
-export const Context = createContext<[ContextState, Dispatch<SetStateAction<ContextState>>] | null>(null);
+export type ISetState<T> = Dispatch<SetStateAction<T>>
