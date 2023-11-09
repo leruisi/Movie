@@ -126,10 +126,10 @@ const Movies = () => {
             </div>
             <div className={style.buttons}>
                 <button disabled={page === '1'} onClick={prevHandler}>
-                    Prev
+                    &#8592;
                 </button>
                 <p>Page | {page}</p>
-                <button  onClick={nextHandler}>Next</button>
+                <button disabled={page === '500'} onClick={nextHandler}>&#8594;</button>
             </div>
 
         </div>

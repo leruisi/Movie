@@ -30,11 +30,21 @@
     color: grey;
     text-align: center;
     margin: 0 auto;
+    padding-top: 5px;
 }
+.raiting{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+
+
 
 .btnDetails{
     background-color: lightblue;
-    border-radius: 20%;
-    height: 20px;
-    width: 50px;
+    border-radius: 50px;
+    height: 30px;
+    width: 70px;
+
 }

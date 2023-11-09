@@ -1,17 +1,18 @@
+
 .Header {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 50px;
-    background-color: blue;
+    background-color: #DCDCDC;
     font-size: 25px;
 }
 
 .Header a {
     text-decoration: none;
-    color: snow;
+    color:#808080 ;
 }
 
 .Header a[class='active'] {
-    color: red;
+    color: #4682B4;
 }
