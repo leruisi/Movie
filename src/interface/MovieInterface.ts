@@ -1,3 +1,5 @@
+import {IGenre} from "./GenreInterface";
+
 export interface IMovie  {
     // page:number;
     id: number,
@@ -16,4 +18,5 @@ export interface IMovieResonse {
     results:IMovie[],
     total_pages:number,
     total_results: number
+    genre:IGenre
 }

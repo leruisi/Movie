@@ -15,6 +15,8 @@ const Movies = () => {
 
     const [movies, setMovies] = useState<IMovie[]>([]);
     const [query, setQuery] = useSearchParams({page: '1'});
+    const [totalPage, setTotalPage]=useState(1)
+    const [loading, setLoading] = useState(false)
     const [searchQuer, setSearchQuer] = useState( '')
     const page = query.get('page') || '1';
 
@@ -22,8 +24,12 @@ const Movies = () => {
     const fetchMovies = async () => {
         try {
             const response = await moviesService.getAll(page);
-            const { results } = response.data;
+            const { results,total_pages } = response.data;
             setMovies(results.slice(0, 6));
+            setTotalPage(totalPage)
+            setTimeout(()=>{
+                setLoading(true)
+            },1000)
             console.log(results);
         } catch (error) {
             console.log('Ошибка');
@@ -55,41 +61,6 @@ const Movies = () => {
 
 
 
-
-    //
-    // useEffect(() => {
-    //         const fetchMovies = async () => {
-    //             try {
-    //                 const response = await moviesService.getAll(page);
-    //                 const {results} = response.data;
-    //                 setMovies(results.slice(0, 6))
-    //
-    //                 console.log(results)
-    //             } catch (error) {
-    //                 console.log("error, Try again")
-    //             }
-    //         }
-    //         fetchMovies()
-    //     },
-    //     [page]);
-
-// //////////////////////////////////////////////////////////
-//     useEffect(() => {
-//         const fetchSearchMovies = async () => {
-//             try {
-//                 const response = await searchService.getAll(films);
-//                 const {results} = response.data;
-//                 setMovies(results.slice(0, 6))
-//
-//                 console.log(results)
-//             } catch (error) {
-//                 console.log("error, Try again")
-//             }
-//         }
-//         fetchSearchMovies()
-//     }, [films]);
-
-    /////////////////////////////////////////////////////////////////
 
 
 
