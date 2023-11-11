@@ -3,15 +3,13 @@ import {IMovie} from "../../../interface/MovieInterface";
 import style from './Movie.module.css'
 import StarRatings from 'react-star-ratings';
 import {useNavigate} from "react-router-dom";
-import {number} from "joi";
+
 interface IProps{
     movie:IMovie
-    id:IMovie
-
 }
 
-const Movie: FC<IProps> = ({movie,id}) => {
-    const{title,poster_path,release_date,original_language,vote_average
+const Movie: FC<IProps> = ({movie}) => {
+    const{id ,title,poster_path,release_date,original_language,vote_average
     } = movie
     const navigate= useNavigate()
 

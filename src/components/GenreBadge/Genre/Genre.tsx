@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 
 import {IGenre} from "../../../interface/GenreInterface";
+
 interface IProps{
     genre:IGenre
 

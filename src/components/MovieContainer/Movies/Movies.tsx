@@ -59,12 +59,6 @@ const Movies = () => {
     }, [searchQuer]);
 
 
-
-
-
-
-
-
     const prevHandler = () => {
         setQuery(prev => {
             prev.set('page', `${+page - 1}`)

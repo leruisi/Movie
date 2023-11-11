@@ -1,12 +1,20 @@
-import React from 'react';
-import {MovieInfo} from "../components/MovieInfo";
+import React, { FC } from 'react';
+import { MovieInfo } from '../components/MovieInfo';
+import { IMovie } from '../interface/MovieInterface';
 
-const MovieInfoPage = () => {
+interface IProps {
+    movie: IMovie;
+}
+
+const MovieInfoPage: FC<IProps> = ({ movie}) => {
+
     return (
         <div>
-<MovieInfo movie={}/>
+
+                <MovieInfo  movie={movie}/>
+
         </div>
     );
 };
 
-export {MovieInfoPage};
+export { MovieInfoPage };
