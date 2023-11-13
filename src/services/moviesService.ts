@@ -8,11 +8,8 @@ import {urls} from "../constant/urls";
 
 
 const moviesService = {
+    getAll: (page: string): IRes<IMovieResonse> => axiosService.get(urls.movie.base + api_key, { params: { page } }),
+    getById: (id: string): IRes<IMovieResonse> => axiosService.get(urls.movie.byMoviesId + api_key, { params: { id } }),
+};
 
-    getAll: (page: string): IRes<IMovieResonse> => axiosService.get(urls.movie.base+api_key, {params: {page}})
-
-}
-
-export {
- moviesService
-}
+export { moviesService };

@@ -1,20 +1,37 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { MovieInfo } from '../components/MovieInfo';
 import { IMovie } from '../interface/MovieInterface';
+import { moviesService } from "../services";
 
-interface IProps {
-    movie: IMovie;
+interface IParams {
+    id:IMovie;
 }
 
-const MovieInfoPage: FC<IProps> = ({ movie}) => {
+const MovieInfoPage: FC = () => {
+    const { id } = useParams<IParams>();
+    const [movie, setMovie] = useState<IMovie (null);
+
+    useEffect(() => {
+        const fetchMovieById = async () => {
+            try {
+                const response = await moviesService.getById(id);
+                setMovie(response.data);
+            } catch (error) {
+                console.error('Error fetching movie:', error);
+            }
+        };
+
+        fetchMovieById();
+
+    }, [id]);
 
     return (
         <div>
-
-                <MovieInfo  movie={movie}/>
-
+            {movie ? <MovieInfo movie={movie} /> : <p>Loading...</p>}
         </div>
     );
 };
 
 export { MovieInfoPage };
+
